@@ -1,4 +1,6 @@
-# TestProject
+# Custome Alerts in Angular 5
+
+You can use this project to learn how to create your own laert system in Angular application.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
