@@ -19,6 +19,21 @@ There 4 parameters to be set
 3. time: number (Timeout of the alert modal)
 4. body: string (Body string of the alert modal. Ex: Error message)
 
+### Examples
+
+#### Success Alert
+
+![success](./success_alert.jpeg)
+
+#### Error Alert
+
+![success](./error_alert.jpeg)
+
+
+#### Warning Alert
+
+![success](./warning_alert.jpeg)
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
