@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 //this is alert-emit interface
 import { Alert } from '../interfaces/alert'; 

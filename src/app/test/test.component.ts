@@ -23,11 +23,10 @@ export class TestComponent implements OnInit {
 
 
   	this.alertSerive.create(
-  		"Title", //title
-  		"danger", //type
+  		"Warning", //title
+  		"info", //type
   		5000, // time
-  		"success Alter" //body
-
+  		"You connection is slower than usual" //body
   		);
   }
 

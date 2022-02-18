@@ -20,17 +20,17 @@ import { AlertService } from './services/alert.service';
 export class AlertComponent implements OnInit {
 
 	//hide and show alert
-	modalStatus : boolean;
+	modalStatus!: boolean;
 
 	//custom settings
-	title:string;
-	type: string;
-	time: number;
-	body: string;
+	title!:string;
+	type!: string;
+	time!: number;
+	body!: string;
 
 	//default settings
-	color: string;
-	backColor: string;
+	color!: string;
+	backColor!: string;
 
   constructor(
   	private alertService : AlertService,
@@ -51,8 +51,8 @@ export class AlertComponent implements OnInit {
  				this.backColor = "#dc3545";
  			}
 
- 			if(this.type == "infor" ){
- 				this.backColor = "#117a8b";
+ 			if(this.type == "info" ){
+					this.backColor = "#a1930f";
  			}
 
  			if(this.type == "success"){
