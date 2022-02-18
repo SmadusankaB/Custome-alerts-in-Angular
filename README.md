@@ -12,11 +12,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ### Use customized alerts
 
-There 4 parameters to be set
+There are 4 parameters to be set based on alert-types.
+Check test.component.ts to see how to use.
 
-1. title: string (Title of the alert modal)
-2. type: string (Type of alert modal. Supported values. success, danger, info)
-3. time: number (Timeout of the alert modal)
+1. title: string (Title of the alert modal).
+2. type: string (Type of the alert modal. Supported values. success, danger, info)
+3. time: number (Timeout of the alert modal).
 4. body: string (Body string of the alert modal. Ex: Error message)
 
 ### Examples
@@ -28,7 +29,6 @@ There 4 parameters to be set
 #### Error Alert
 
 ![success](./error_alert.jpeg)
-
 
 #### Warning Alert
 
