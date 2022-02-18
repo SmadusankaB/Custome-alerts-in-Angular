@@ -13,10 +13,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ### Use customized alerts
 
 There 4 parameters to be set
-title: string (Title of the alert modal)
-type: string (Type of alert modal. Supported values. success, danger, info)
-time: number (Timeout of the alert modal)
-body: string (Body string of the alert modal. Ex: Error message)
+
+1. title: string (Title of the alert modal)
+2. type: string (Type of alert modal. Supported values. success, danger, info)
+3. time: number (Timeout of the alert modal)
+4. body: string (Body string of the alert modal. Ex: Error message)
 
 ## Code scaffolding
 
