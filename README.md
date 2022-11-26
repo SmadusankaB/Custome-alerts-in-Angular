@@ -1,16 +1,17 @@
-# How to use
+# Custom Alerts in Angular
 
-This an example Angular project to implement custom alerts
+The project has been upgraded to Angular 13. This an example Angular project to implement custom alerts
 
-The project has been upgraded to Angular 12
+## Prerequisite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+* Node v18.12.1
+* NPM 8.19.2
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Use customized alerts
+## Use customized alerts
 
 There are 4 parameters to be set based on alert-types.
 Check test.component.ts to see how to use.
