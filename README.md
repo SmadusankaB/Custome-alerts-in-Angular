@@ -21,6 +21,8 @@ Check test.component.ts to see how to use.
 3. time: number (Timeout of the alert modal).
 4. body: string (Body string of the alert modal. Ex: Error message)
 
+[![Custom Alerts tutorial](https://github.com/SmadusankaB/Custome-alerts-in-Angular/blob/master/success_alert.jpeg)](https://youtu.be/D_aqdcWeHe8 "Customizable alerts component in angular | Angular tutorial")
+
 ### Examples
 
 #### Success Alert
