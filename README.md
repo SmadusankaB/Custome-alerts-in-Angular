@@ -1,6 +1,6 @@
 # Custom Alerts in Angular
 
-The project has been upgraded to Angular 13. This an example Angular project to implement custom alerts
+The project has been upgraded to Angular 14. This an example Angular project to implement custom alerts
 
 ## Prerequisite
 
