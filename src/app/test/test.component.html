@@ -1,3 +1,5 @@
+<app-alert (alertResEvent)="getAlertRes($event)"></app-alert>
+
 <div id="container">
   <div>
     <button (click)="successAlert()">Success</button>
@@ -8,4 +10,5 @@
   <div>
     <button (click)="failedAlert()">Failed</button>
   </div>
+  <p>{{alertResponse}}</p>
 </div>

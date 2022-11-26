@@ -7,9 +7,11 @@ import { AlertService } from '../shared/modules/alert/services/alert.service';
 })
 export class TestComponent implements OnInit {
 
+	alertResponse: boolean = false;
+
 	constructor(private alertService: AlertService) { }
 
-	ngOnInit() {}
+	ngOnInit() { }
 
 	successAlert(): void {
 		this.alertService.create(
@@ -36,5 +38,9 @@ export class TestComponent implements OnInit {
 			5000, // time
 			"You connection is slower than usual" //body
 		);
+	}
+
+	getAlertRes(res: boolean): void {
+		this.alertResponse = res;
 	}
 }

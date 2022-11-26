@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, state, animate } from '@angular/animations';
 import { AlertService } from './services/alert.service';
 
@@ -31,6 +31,8 @@ export class AlertComponent implements OnInit {
 	//default settings
 	color!: string;
 	backColor!: string;
+
+	@Output() alertResEvent = new EventEmitter<boolean>();
 
 	constructor(
 		private alertService: AlertService,
@@ -78,7 +80,8 @@ export class AlertComponent implements OnInit {
 	}
 
 	//close alert after click on ok and cross
-	resolve() {
+	resolve(res: boolean) {
 		this.modalStatus = false;
+		this.alertResEvent.emit(res);
 	}
 }
