@@ -2,26 +2,26 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 //this is alert-emit interface
-import { Alert } from '../interfaces/alert'; 
+import { Alert } from '../interfaces/alert';
 
 
 @Injectable()
 export class AlertService {
 
-  alertSettings$ = new Subject<Alert>()
+	alertSettings$ = new Subject<Alert>()
 
-  constructor() { }
+	constructor() { }
 
 
-  create(
-  	title: string, type: string , time: number, body: string){
-  	this.alertSettings$.next({
-  		title,
-  		type,
-  		time,
-  		body
-  	});
-  }
+	create(
+		title: string, type: string, time: number, body: string) {
+		this.alertSettings$.next({
+			title,
+			type,
+			time,
+			body
+		});
+	}
 
 
 

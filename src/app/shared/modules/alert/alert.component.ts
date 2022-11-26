@@ -1,19 +1,19 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import{ trigger, transition, style, state, animate  } from '@angular/animations';
+import { trigger, transition, style, state, animate } from '@angular/animations';
 import { AlertService } from './services/alert.service';
 
 @Component({
-  selector: 'app-alert',
-  templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.scss'],
-  animations: [
-	trigger('dialog', [
+	selector: 'app-alert',
+	templateUrl: './alert.component.html',
+	styleUrls: ['./alert.component.scss'],
+	animations: [
+		trigger('dialog', [
 			transition('void => *', [
-				style({transform: 'scale3d(.3, .3, .3)'} ),
+				style({ transform: 'scale3d(.3, .3, .3)' }),
 				animate(100)
-				]),
-			transition('void => *', 
-				animate(100, style({transform: 'scale3d(.3, .3, .3)'})))
+			]),
+			transition('void => *',
+				animate(100, style({ transform: 'scale3d(.3, .3, .3)' })))
 		])
 	]
 })
@@ -23,7 +23,7 @@ export class AlertComponent implements OnInit {
 	modalStatus!: boolean;
 
 	//custom settings
-	title!:string;
+	title!: string;
 	type!: string;
 	time!: number;
 	body!: string;
@@ -32,54 +32,53 @@ export class AlertComponent implements OnInit {
 	color!: string;
 	backColor!: string;
 
-  constructor(
-  	private alertService : AlertService,
-  	private _ngZone : NgZone
-  	) { }
+	constructor(
+		private alertService: AlertService,
+		private _ngZone: NgZone
+	) { }
 
-  ngOnInit() {
+	ngOnInit() {
 
-  	this.alertService.alertSettings$.subscribe(
-  		(data) => {
- 			
- 			this.title = data.title;
- 			this.type = data.type;
- 			this.time = data.time;
- 			this.body = data.body
+		this.alertService.alertSettings$.subscribe(
+			(data) => {
 
- 			if(this.type == "danger"){
- 				this.backColor = "#dc3545";
- 			}
+				this.title = data.title;
+				this.type = data.type;
+				this.time = data.time;
+				this.body = data.body
 
- 			if(this.type == "info" ){
+				if (this.type == "danger") {
+					this.backColor = "#dc3545";
+				}
+
+				if (this.type == "info") {
 					this.backColor = "#a1930f";
- 			}
+				}
 
- 			if(this.type == "success"){
- 				this.backColor = "#28a745";
- 			}
+				if (this.type == "success") {
+					this.backColor = "#28a745";
+				}
 
- 			//show alert
- 			this.modalStatus = true;
+				//show alert
+				this.modalStatus = true;
 
-            // hide alert after given time
- 			this._ngZone.runOutsideAngular(() =>
+				// hide alert after given time
+				this._ngZone.runOutsideAngular(() =>
 
- 				setTimeout(() =>
- 					this._ngZone.run(() => 
- 						this.modalStatus = false
- 						), this.time
- 					)
- 				)
+					setTimeout(() =>
+						this._ngZone.run(() =>
+							this.modalStatus = false
+						), this.time
+					)
+				)
 
-  		}
-  		);
+			}
+		);
 
-  }
+	}
 
-  //close alert afert click on ok and cross
-  resolve(){
-  	this.modalStatus = false;
-  }
-
+	//close alert after click on ok and cross
+	resolve() {
+		this.modalStatus = false;
+	}
 }
