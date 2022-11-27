@@ -1,5 +1,5 @@
-import { Component, OnInit, NgZone, Output, EventEmitter } from '@angular/core';
-import { trigger, transition, style, state, animate } from '@angular/animations';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 import { AlertService } from './services/alert.service';
 
 @Component({
@@ -36,7 +36,6 @@ export class AlertComponent implements OnInit {
 
 	constructor(
 		private alertService: AlertService,
-		private _ngZone: NgZone
 	) { }
 
 	ngOnInit() {
@@ -63,17 +62,6 @@ export class AlertComponent implements OnInit {
 
 				//show alert
 				this.modalStatus = true;
-
-				// hide alert after given time
-				this._ngZone.runOutsideAngular(() =>
-
-					setTimeout(() =>
-						this._ngZone.run(() =>
-							this.modalStatus = false
-						), this.time
-					)
-				)
-
 			}
 		);
 
