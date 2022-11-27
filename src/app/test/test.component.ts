@@ -18,7 +18,7 @@ export class TestComponent implements OnInit {
 			"Success", //title
 			"success", //type: success, danger, info
 			5000, // time
-			"You connection is slower than usual" //body
+			"Connection success" //body
 		);
 	}
 
@@ -27,7 +27,7 @@ export class TestComponent implements OnInit {
 			"Warning", //title
 			"info", //type: success, danger, info
 			5000, // time
-			"You connection is slower than usual" //body
+			"Connection is slower than usual" //body
 		);
 	}
 
@@ -36,7 +36,7 @@ export class TestComponent implements OnInit {
 			"Failed", //title
 			"danger", //type: success, danger, info
 			5000, // time
-			"You connection is slower than usual" //body
+			"Connection failed" //body
 		);
 	}
 
