@@ -8,10 +8,9 @@ import { Alert } from '../interfaces/alert';
 @Injectable()
 export class AlertService {
 
-	alertSettings$ = new Subject<Alert>()
+	alertSettings$ = new Subject<Alert>();
 
 	constructor() { }
-
 
 	create(
 		title: string, type: string, time: number, body: string) {
@@ -22,7 +21,4 @@ export class AlertService {
 			body
 		});
 	}
-
-
-
 }

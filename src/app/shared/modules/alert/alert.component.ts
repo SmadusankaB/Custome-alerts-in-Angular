@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { AlertService } from './services/alert.service';
+import { Alert } from './interfaces/alert';
 
 @Component({
 	selector: 'app-alert',
@@ -29,7 +30,6 @@ export class AlertComponent implements OnInit {
 	body!: string;
 
 	//default settings
-	color!: string;
 	backColor!: string;
 
 	@Output() alertResEvent = new EventEmitter<boolean>();
@@ -39,10 +39,8 @@ export class AlertComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-
 		this.alertService.alertSettings$.subscribe(
-			(data) => {
-
+			(data: Alert) => {
 				this.title = data.title;
 				this.type = data.type;
 				this.time = data.time;
@@ -51,20 +49,16 @@ export class AlertComponent implements OnInit {
 				if (this.type == "danger") {
 					this.backColor = "#dc3545";
 				}
-
 				if (this.type == "info") {
 					this.backColor = "#a1930f";
 				}
-
 				if (this.type == "success") {
 					this.backColor = "#28a745";
 				}
-
 				//show alert
 				this.modalStatus = true;
 			}
 		);
-
 	}
 
 	//close alert after click on ok and cross
